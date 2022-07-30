@@ -1,0 +1,196 @@
+//import
+
+@import "utilities/variables";
+
+
+
+
+/*RESET*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Teko', sans-serif;
+    list-style: none;
+}
+
+
+/*FONDOS DE PAGINAs*/
+
+.body-index{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/fondo1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.body-art {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/fondo2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+.body-can {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/fondo3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+.body-nosotros {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/fondo4.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+
+.body-contacto {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/fondo5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+
+/*GRID GENERAL*/
+
+body{
+    display: grid;
+    grid-template-areas: "header header"
+                         "main main"
+                         "footer footer";
+    
+    main{
+        grid-area: main;
+    }
+    
+    
+}
+
+
+
+
+/*MENU HAMBURGUESA-GENERAL*/
+
+header{
+    background-color: black;
+    grid-area: header;
+    height: 110px;
+
+    nav{
+        background-color: black;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        section{
+            .logo-uno{
+                width: 280px;
+                margin-left: 10px;
+                margin-top: 5px;
+            
+            }
+            .logo-dos{
+                display: none;
+            }
+        }
+        .bar-btn{
+            color: $color-principal;
+            font-size: 50px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+
+        .nav-menu{
+            position: fixed;
+            width: 100%;
+            height: 0vh;
+            top: 110px;
+            background-color: rgba(0, 0, 0, .90);
+            text-align: center;
+            transition: all .5s;
+            li{
+                display: none;
+                line-height: 30px;
+                margin: 50px 0;
+                transition: all .5s;
+                a{
+                    color: white;
+                    font-size: 30px;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .nav-menu li a.active, .nav-menu li a:hover{
+            color: $color-principal;
+            transition: .5s;
+        }
+
+        #check{
+            display: none;
+        }
+        #check:checked ~ .nav-menu{
+            height: 100vh;
+        }
+        #check:checked ~ .nav-menu li{
+            display: block;
+        }
+    }
+
+    
+    
+}
+
+
+//ESTILOS DE PAGINA INDEX
+@import "utilities/index";
+
+
+
+/*FOOTER*/
+footer{
+    grid-area: footer;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin-top: auto;
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
